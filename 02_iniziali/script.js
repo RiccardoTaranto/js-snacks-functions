@@ -12,7 +12,7 @@ function getIniziali(names) {
     return iniziali
 }
 
-const getInizials = (names) => {
+const getInitials = (names) => {
     const iniziali = [];
     for (i = 0; i < names.length; i++) {
         iniziali.push(names[i][0])
@@ -21,7 +21,7 @@ const getInizials = (names) => {
 }
 
 // Invoca la funzione qui e stampa il risultato in console
-console.log(getIniziali(names));
-console.log(getInizials(names));
+console.log(getInitiali(names));
+console.log(getInitials(names));
 
 //Risultato atteso: ["A", "L", "M", "A", "G", "A"]

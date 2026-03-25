@@ -4,10 +4,21 @@ const names = ["Anna", "Luca", "Marco", "Adele", "Laura", "Alessandra"];
 
 
 // Dichiara la funzione qui.
+function getNames(array, letter) {
+  const result = [];
 
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].startsWith(letter)) {
+      result.push(array[i]);
+    }
+  }
+
+  return result;
+}
 
 // Invoca la funzione qui e stampa il risultato in console
+const filteredNames = getNames(names, "A");
+console.log(filteredNames);
 
 
-
-//Risultato atteso se si passa la lettera A: ["Anna", "Adele", "Alessandra"]
+//Risultato atteso se si passa la lettera A: ["Anna", "Adele", "Alessandra"*
