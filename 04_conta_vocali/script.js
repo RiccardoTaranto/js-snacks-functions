@@ -14,6 +14,18 @@ for (let i =0; i<string.length; i++){
 return counter;
 }
 
+/* ARROW FUNCTION
+const getVowels = (string) => {
+let counter = 0;
+for (let i =0; i<string.length; i++){
+ if (string[i].includes('a') || string[i].includes('e') || string[i].includes('i') || string[i].includes('o') || string[i].includes('u')) {
+ counter++; 
+}
+}
+return counter;
+}
+*/
+
 // Invoca la funzione qui e stampa il risultato in console
 const filteredVowels = getVowels(word);
 console.log(filteredVowels);
