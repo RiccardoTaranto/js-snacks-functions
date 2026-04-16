@@ -1,27 +1,35 @@
-/* Scrivi una funzione che accetti un array di nomi e restituisca nuovo un array con le iniziali di ogni parola dell'array fornito */
+/* Scrivi una funzione che accetti un array di nomi e 
+restituisca nuovo un array con le iniziali di ogni parola dell'array fornito */
 
 const names = ["Anna", "Luca", "Marco", "Adele", "Giovanni", "Alessandra"];
 
 
-// Dichiara la funzione qui.
-function getIniziali(names) {
-    const iniziali = [];
-    for (i = 0; i < names.length; i++) {
-        iniziali.push(names[i][0])
+// Dichiara la funzione (STANDARD)
+function getInitialsStandard(names) {
+    const initials = [];
+    for (let i = 0; i < names.length; i++) {
+        initials.push(names[i][0])
     }
-    return iniziali
+    return initials
 }
-
-const getInitials = (names) => {
-    const iniziali = [];
-    for (i = 0; i < names.length; i++) {
-        iniziali.push(names[i][0])
-    }
-    return iniziali
-}
-
 // Invoca la funzione qui e stampa il risultato in console
-console.log(getInitiali(names));
-console.log(getInitials(names));
+console.log(getInitialsStandard(names));
+
+
+/////////////////////////////////////////////////////////
+
+
+// Dichiara la funzione (MODERN)
+const getInitialsModern = names => {
+    const initials = [];
+    for (let i = 0; i < names.length; i++) {
+        initials.push(names[i][0])
+    }
+    return initials
+}
+// Invoca la funzione qui e stampa il risultato in console
+console.log(getInitialsModern(names));
+
+
 
 //Risultato atteso: ["A", "L", "M", "A", "G", "A"]
