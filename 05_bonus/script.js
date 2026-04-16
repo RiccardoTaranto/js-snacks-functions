@@ -12,15 +12,12 @@ const name = 'Mario';
 // Dichiara la funzione qui. (STANDARD)
 function userGreetings(name) {
   const getTime = new Date().getHours();
-  if (getTime >= 5 && getTime <= 13) {
+  if (getTime <= 13) {
     return `Buongiorno ${name}`;
-  } else if (getTime > 13 && getTime <= 17) {
+  } else if (getTime <= 17) {
     return `Buon pomeriggio ${name}`;
-  } else if(getTime > 17 && getTime <= 23){
-    return `Buonasera ${name}`;
-  } else {
-    return `Buona notte ${name}`;
-  }
+  } else (getTime <= 23)
+  return `Buonasera ${name}`;
 }
 // Invoca la funzione qui e stampa il risultato in console
 const greetings = userGreetings(name);
@@ -32,16 +29,13 @@ console.log(greetings);
 // Dichiara la funzione qui. (moderno)
 const userRegards = (name) => {
   const getTime = new Date().getHours();
-  
-  if (getTime >= 5 && getTime <= 13) {
+
+  if (getTime <= 13) {
     return `Buongiorno ${name}`;
-  } else if (getTime > 13 && getTime <= 17) {
+  } else if (getTime <= 17) {
     return `Buon pomeriggio ${name}`;
-  } else if (getTime > 17 && getTime <= 23) {
+  } else (getTime <= 23)
     return `Buonasera ${name}`;
-  } else {
-    return `Buona notte ${name}`;
-  }
 }
 // Invoca la funzione qui e stampa il risultato in console
 const regards = userRegards(name);
