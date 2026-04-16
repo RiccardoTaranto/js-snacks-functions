@@ -3,32 +3,37 @@
 const word = 'javascript';
 
 
-// Dichiara la funzione qui.
-function getVowels(string){ 
-let counter = 0;
-for (let i =0; i<string.length; i++){
- if (string[i].includes('a') || string[i].includes('e') || string[i].includes('i') || string[i].includes('o') || string[i].includes('u')) {
- counter++; 
+// Dichiara la funzione qui. (STANDARD)
+function getVowels(word) {
+    const filterVowel = [];
+    for (let i = 0; i < word.length; i++) {
+        if (word[i][0].includes('a', 'e', 'i', 'o', 'u')) {
+            filterVowel.push([i][0])
+        }
+    }
+    return filterVowel;
 }
-}
-return counter;
-}
-
-/* ARROW FUNCTION
-const getVowels = (string) => {
-let counter = 0;
-for (let i =0; i<string.length; i++){
- if (string[i].includes('a') || string[i].includes('e') || string[i].includes('i') || string[i].includes('o') || string[i].includes('u')) {
- counter++; 
-}
-}
-return counter;
-}
-*/
-
 // Invoca la funzione qui e stampa il risultato in console
-const filteredVowels = getVowels(word);
-console.log(filteredVowels);
+const filterVowel = getVowels(word);
+console.log(filterVowel);
+
+
+/////////////////////////////////////////////////////////////////////////
+
+
+// Dichiara la funzione qui. (MODERN)
+const getByVowels = word => {
+    const filterByVowel = [];
+    for (let i = 0; i < word.length; i++) {
+        if (word[i][0].includes('a', 'e', 'i', 'o', 'u')) {
+            filterByVowel.push([i][0])
+        }
+    }
+    return filterVowel;
+}
+// Invoca la funzione qui e stampa il risultato in console
+const filterByVowels = getByVowels(word);
+console.log(filterByVowels);
 
 
 //Risultato atteso se si passa 'javascript': 3 (a, a, i)
